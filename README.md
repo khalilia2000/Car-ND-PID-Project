@@ -33,6 +33,8 @@ Provided that all dependencies are alredy installed and linked properly:
 
 1. Usnig only a P control resulted in oscillating movements of the car around the centreline. The higher the p-error coefficient is, more oscillations will result.  
 
+<video src="./videos/vid-p0.75-i0.0-d0.0.mp4" type="video/mp4">
+
 <html>
     <video width="99%" height="540" autoplay loop muted>
         <source src="/videos/vid-p0.75-i0.0-d0.0.mp4" type="video/mp4">
