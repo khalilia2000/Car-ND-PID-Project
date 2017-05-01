@@ -45,4 +45,6 @@ The coefficients for the PID controller were set using manual adjusting starting
 
 [video-4 with coefficients: P=0.75, I=0.0, D=30.0](https://github.com/khalilia2000/Car-ND-PID-Project/blob/master/videos/vid-p0.75-i0.0-d30.0.mp4)
 
-3. Fianlly adding the I control component will result in a smoother ride. However, the I-error coefficient should be very small relative to P-coefficient; otherwise, the car will go off track.  
+3. Fianlly adding the I control component will result in a smoother ride by compensating for the drift that is present in the car steering. However, the I-error coefficient should be very small relative to P-coefficient; otherwise, the car will go off track. A value of 0.0008 was found to be sufficient to result in a successful ride. The following video shows the car going around the track once.  
+
+[video-4 with coefficients: P=0.75, I=0.0008, D=30.0](https://github.com/khalilia2000/Car-ND-PID-Project/blob/master/videos/vid-p0.75-i0.008-d30.0.mp4)
