@@ -39,5 +39,10 @@ The coefficients for the PID controller were set using manual adjusting starting
 
 [video-2 with coefficients: P=5.0, I=0.0, D=0.0](https://github.com/khalilia2000/Car-ND-PID-Project/blob/master/videos/vid-p5.0-i0.0-d0.0.mp4)
 
-2. A combination of P and D control can result in a relatively smooth ride. It appears the amuont of the drift is not significant, and the combinatino of the P and D works. In order to eliminate/reduce the amount of oscillation around the centerline, the amount of the D coefficient should be one order of magnitude larger than the P coefficient.  
+2. The D coefficient should be an order of magnitude higher than the P coefficient. The following 2 videos show the behaviour of the car using D coefficients of 0.75 and 30.0 (both using a P coefficient of 0.75 as stated above). As can be noted from the videos, a D coefficient of 30.0 (along with P coefficient of 0.75) results in successful laps around track. A combination of P and D control can result in a relatively smooth ride, however, due to the drift being present in the car steering, once in a while the car sharply turns back towards the centerline. It appears the amuont of the drift is not significant though.  
+
+[video-3 with coefficients: P=0.75, I=0.0, D=0.75](https://github.com/khalilia2000/Car-ND-PID-Project/blob/master/videos/vid-p0.75-i0.0-d0.75.mp4)
+
+[video-4 with coefficients: P=0.75, I=0.0, D=30.0](https://github.com/khalilia2000/Car-ND-PID-Project/blob/master/videos/vid-p0.75-i0.0-d30.0.mp4)
+
 3. Fianlly adding the I control component will result in a smoother ride. However, the I-error coefficient should be very small relative to P-coefficient; otherwise, the car will go off track.  
