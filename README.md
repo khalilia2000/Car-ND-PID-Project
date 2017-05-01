@@ -29,22 +29,26 @@ Provided that all dependencies are alredy installed and linked properly:
 3. Compile: `cmake .. && make`
 4. Run it: `./pid`. 
 
+## Rubric
+
+The rubric for this project is located [here](https://review.udacity.com/#!/rubrics/824/view)  
+
 ## Reflections
 
 The coefficients for the PID controller were set using manual adjusting starting only by setting the P coefficient. Then adding the D coefficient, and then adding the I coefficient. Of course for each coefficient considered, there were lots of fine-tuning while keeping the previous coefficients constant. The following reflections are noted:
 
-1. Usnig only a P control resulted in oscillating movements of the car around the centreline. The higher the p-error coefficient is, the sharper will be the return to the centerline. The following 2 videos show the behaviour of the car using P coefficients of 0.75 and 5.0.  A P coefficient of 0.75 was chosen as the best setting value:
+1. Using only a P control resulted in oscillating movements of the car around the centreline. The higher the p-error coefficient is, the sharper will be the return to the centerline. The following 2 videos show the behaviour of the car using P coefficients of 0.75 and 5.0.  A P coefficient of 0.75 was chosen as the best setting value:
 
 [video-1 with coefficients: P=0.75, I=0.0, D=0.0](https://github.com/khalilia2000/Car-ND-PID-Project/blob/master/videos/vid-p0.75-i0.0-d0.0.mp4)
 
 [video-2 with coefficients: P=5.0, I=0.0, D=0.0](https://github.com/khalilia2000/Car-ND-PID-Project/blob/master/videos/vid-p5.0-i0.0-d0.0.mp4)
 
-2. The D coefficient should be an order of magnitude higher than the P coefficient. The following 2 videos show the behaviour of the car using D coefficients of 0.75 and 30.0 (both using a P coefficient of 0.75 as stated above). As can be noted from the videos, a D coefficient of 30.0 (along with P coefficient of 0.75) results in successful laps around track. A combination of P and D control can result in a relatively smooth ride, however, due to the drift being present in the car steering, once in a while the car sharply turns back towards the centerline. It appears the amuont of the drift is not significant though.  
+2. The D coefficient should be an order of magnitude higher than the P coefficient. The following 2 videos show the behaviour of the car using D coefficients of 0.75 and 30.0 (both using a P coefficient of 0.75 as stated above). As can be noted from the videos, a D coefficient of 30.0 (along with P coefficient of 0.75) results in successful laps around track. A combination of P and D control can result in a relatively smooth ride, however, due to the drift being present in the car steering, once in a while the car sharply turns back towards the centerline. It appears the amount of the drift is not significant though.  
 
 [video-3 with coefficients: P=0.75, I=0.0, D=0.75](https://github.com/khalilia2000/Car-ND-PID-Project/blob/master/videos/vid-p0.75-i0.0-d0.75.mp4)
 
 [video-4 with coefficients: P=0.75, I=0.0, D=30.0](https://github.com/khalilia2000/Car-ND-PID-Project/blob/master/videos/vid-p0.75-i0.0-d30.0.mp4)
 
-3. Fianlly adding the I control component will result in a smoother ride by compensating for the drift that is present in the car steering. However, the I-error coefficient should be very small relative to P-coefficient; otherwise, the car will go off track. A value of 0.0008 was found to be sufficient to result in a successful ride. The following video shows the car going around the track once.  
+3. Finally adding the I control component will result in a smoother ride by compensating for the drift that is present in the car steering. However, the I-error coefficient should be very small relative to P-coefficient; otherwise, the car will go off track. A value of 0.0008 was found to be sufficient to result in a successful ride. The following video shows the car going around the track once.  
 
-[video-4 with coefficients: P=0.75, I=0.0008, D=30.0](https://github.com/khalilia2000/Car-ND-PID-Project/blob/master/videos/vid-p0.75-i0.008-d30.0.mp4)
+[video-5 with coefficients: P=0.75, I=0.0008, D=30.0](https://github.com/khalilia2000/Car-ND-PID-Project/blob/master/videos/vid-p0.75-i0.008-d30.0.mp4)
