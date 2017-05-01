@@ -31,15 +31,13 @@ Provided that all dependencies are alredy installed and linked properly:
 
 ## Reflections
 
-1. Usnig only a P control resulted in oscillating movements of the car around the centreline. The higher the p-error coefficient is, more oscillations will result.  
+The coefficients for the PID controller were set using manual adjusting starting only by setting the P coefficient. Then adding the D coefficient, and then adding the I coefficient. Of course for each coefficient considered, there were lots of fine-tuning while keeping the previous coefficients constant. The following reflections are noted:
 
-<video src="./videos/vid-p0.75-i0.0-d0.0.mp4" type="video/mp4">
+1. Usnig only a P control resulted in oscillating movements of the car around the centreline. The higher the p-error coefficient is, the sharper will be the return to the centerline. The following 2 videos show the behaviour of the car using P coefficients of 0.75 and 5.0.  A P coefficient of 0.75 was chosen as the best setting value:
 
-<html>
-    <video width="99%" height="540" autoplay loop muted>
-        <source src="/videos/vid-p0.75-i0.0-d0.0.mp4" type="video/mp4">
-    </video>
-</html>
+[video-1 with coefficients: P=0.75, I=0.0, D=0.0](https://github.com/khalilia2000/Car-ND-PID-Project/blob/master/videos/vid-p0.75-i0.0-d0.0.mp4)
+
+[video-2 with coefficients: P=5.0, I=0.0, D=0.0](https://github.com/khalilia2000/Car-ND-PID-Project/blob/master/videos/vid-p5.0-i0.0-d0.0.mp4)
 
 2. A combination of P and D control can result in a relatively smooth ride. It appears the amuont of the drift is not significant, and the combinatino of the P and D works. In order to eliminate/reduce the amount of oscillation around the centerline, the amount of the D coefficient should be one order of magnitude larger than the P coefficient.  
 3. Fianlly adding the I control component will result in a smoother ride. However, the I-error coefficient should be very small relative to P-coefficient; otherwise, the car will go off track.  
