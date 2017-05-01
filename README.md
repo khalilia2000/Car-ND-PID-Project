@@ -22,6 +22,8 @@ Self-Driving Car Engineer Nanodegree Program
 
 ## Basic Build Instructions
 
+Provided that all dependencies are alredy installed and linked properly:  
+
 1. Clone this repo.
 2. Make a build directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
@@ -30,5 +32,12 @@ Self-Driving Car Engineer Nanodegree Program
 ## Reflections
 
 1. Usnig only a P control resulted in oscillating movements of the car around the centreline. The higher the p-error coefficient is, more oscillations will result.  
+
+<html>
+    <video width="99%" height="540" autoplay loop muted>
+        <source src="/videos/vid-p0.75-i0.0-d0.0.mp4" type="video/mp4">
+    </video>
+</html>
+
 2. A combination of P and D control can result in a relatively smooth ride. It appears the amuont of the drift is not significant, and the combinatino of the P and D works. In order to eliminate/reduce the amount of oscillation around the centerline, the amount of the D coefficient should be one order of magnitude larger than the P coefficient.  
 3. Fianlly adding the I control component will result in a smoother ride. However, the I-error coefficient should be very small relative to P-coefficient; otherwise, the car will go off track.  
