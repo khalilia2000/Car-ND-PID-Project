@@ -31,7 +31,7 @@ Provided that all dependencies are alredy installed and linked properly:
 
 ## Rubric
 
-The rubric for this project is located [here](https://review.udacity.com/#!/rubrics/824/view)  
+The rubric for this project is located [here](https://review.udacity.com/#!/rubrics/824/view).  
 
 ## Reflections
 
